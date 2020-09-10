@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Points</title>
+</head>
+<body>
+    <h3>Wins : <input type="number" id="wins"></h3>
+    <br>
+    <h3>Draws : <input type="number" id="draws"></h3>
+    <br>
+    <h3>Loses : <input type="number" id="loses"></h3>
+    <button id="total" onclick="calculate()">Calculate</button>
+    <br>
+    <h3>Result : <span id="result"></span></h3>
+    <script>
+        function calculate(){
+            var n1 = parseFloat(document.getElementById('wins').value),
+            n2 = parseFloat(document.getElementById('draws').value),
+            n3 = parseFloat(document.getElementById('loses').value);
+            printResult (total (n1 , n2 , n3));
+        }
+        function total (n1 , n2 , n3){
+            return (n1 * 3 + n2 * 1 + ' Points')
+        }
+        function printResult(result){
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+</html>

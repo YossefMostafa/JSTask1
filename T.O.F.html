@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True Or False</title>
+</head>
+<body>
+    <h3>Number1 : <input type="number" id="num1"></h3>
+    <br>
+    <h3>Number2 : <input type="number" id="num2"></h3>
+    <br>
+    <button id="compare" onclick="check()">Check</button>
+    <br>
+    <h3>Result : <span id="result"></span></h3>
+    <script>
+        function check(){
+            var n1 = parseFloat(document.getElementById('num1').value),
+            n2 = parseFloat(document.getElementById('num2').value);
+            printResult(compare (n1 , n2));
+          
+        }
+        function compare (n1 , n2){
+            if (n1==n2){
+               return n1=n2=Boolean(1);
+            }
+            else {
+                 return Boolean(0);
+            }
+        }
+        function printResult(result){
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+</html>

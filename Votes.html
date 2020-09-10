@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votes Results</title>
+</head>
+<body>
+    <h3>UpVotes : <input type="number" id="upvotes"></h3>
+    <br>
+    <h3>DownVotes : <input type="number" id="downvotes"></h3>
+    <br>
+    <button id="total" onclick="calculate()">Calculate</button>
+    <br>
+    <h3>Results : <span id="results"></span></h3>
+    <script>
+        function calculate(){
+            var n1 = parseFloat(document.getElementById('upvotes').value),
+            n2 = parseFloat (document.getElementById('downvotes').value);
+            printResult(total (n1 , n2))
+        }
+        function total (n1 , n2){
+            return (n1 - n2 + ' Votes')
+        }
+        function printResult(results){
+            document.getElementById('results').innerHTML = results;
+        }
+    </script>
+</body>
+</html>
